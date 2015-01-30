@@ -1,0 +1,71 @@
+<!doctype html>
+<html ng-app="myApp">
+  <head>
+    <meta http-equiv="Expires" content="0">
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular.js">
+    </script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular-cookies.min.js">
+    </script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular-resource.min.js">
+    </script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.27/angular-route.js">
+    </script>
+    <script src="//angular-ui.github.io/bootstrap/ui-bootstrap-tpls-0.12.0.js">
+    </script>
+    <script type="text/javascript" src="index.js"></script>    
+    <link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css"
+    rel="stylesheet">
+    <link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap-theme.min.css"
+    rel="stylesheet">
+  </head>
+  <body ng-controller="ConfigController">
+<div class="container-fluid ng-scope">
+    <div class="span12">
+      <legend>EWS Configs</legend>
+      <table class="table" style="border:0;">
+        <tbody>
+          <tr>
+            <td>Service({{service}})</td>
+            <td>
+              <tabset>
+                <tab select="sel('service',e.Id)" heading="{{e.Name}}" ng-repeat="e in services">
+                </tab>                
+              </tabset>
+              <select ng-model="service" ng-options="e.Id as e.Name +'               -  ('+e.Id+')' for e in services">
+              </select>
+            </td>
+          </tr>         
+          <tr>
+            <td>Json</td>
+            <td>              
+              <div>
+              <textarea style="margin: 10px; width: 437px; height: 160px;">
+{
+  "deeplinkbase" : "http://www.expedia.com"
+}</textarea></div>
+            </td>
+          </tr>
+          <tr>
+            <td>
+            </td>
+            <td>
+              <button class="btn btn-default" type="button">
+                <i class="icon-ok">
+                </i>
+                Save
+              </button>
+              &nbsp;&nbsp;
+              <button class="btn btn-primary" type="button">
+                <i class="icon-arrow-left">
+                </i>
+                Cancel
+              </button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+</div>
+</div>
+  </body>
+</html>

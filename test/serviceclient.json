@@ -1,0 +1,47 @@
+{
+    "ServiceConfig": {
+        "ServiceId": "51ae7a6e86d08c1051acdc6f",
+        "CreateDate": "2014-08-25T08:41:40.921Z",
+        "LastModifiedDate": "2014-08-25T08:41:40.921Z",
+        "Content": {
+            "LCSLocaleLanguageIDMapping": {
+                "en-US": 1033,
+                "en-GB": 2057
+            }
+        }
+    },
+    "MessageConfigs": [{
+            "MessageId": "51a7ee8603d4dd5a40bb35c4",
+            "CreateDate": "2013-03-22T23:49:07.447Z",
+            "LastModifiedDate": "2013-03-22T23:49:07.447Z",
+            "Content": {
+                "Configs": { 
+                    "lsrMaxAPW": 33,
+                    "deeplink": {
+                        "deeplinkBase": "hotelsearch.expedia.com"
+                    }
+                },
+                "BrandConfigs": { 
+                    "5420cfa803d4c46fef20b75f": { 
+                        "Content": {
+                            "Configs": {
+                                "deeplink": {
+                                    "deeplinkBase": "ecom.expedia.com"
+                                }
+                            },
+                            "PosConfigs": { 
+                                "5420cfa803d4c46fef20b740": {
+                                    "Content": {
+                                        "deeplink": {
+                                            "deeplinkBase2": "na.expedia.com"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    ]
+}

@@ -1,0 +1,39 @@
+<html ng-app>
+  <head>
+    <script src="angular.js"></script>    
+    <script src="ui-bootstrap-tpls-0.12.0.min.js"></script>
+    <script src="data.json"></script> 
+    <script type="text/javascript">
+        function AppCtr($scope) {
+          $scope.data = data
+        }
+    </script>
+    
+    <link href="bootstrap.min.css" rel="stylesheet">
+  </head>
+  <body>
+    <div ng-controller="AppCtr">
+      <table class="table">
+        <caption>Files</caption>
+        <thead>
+          <tr>
+            <th>Index</th>
+            <th>Name</th>            
+            <th>Time</th>
+            <th>Count</th>
+            <th>Main Files</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr ng-repeat="f in data">
+            <th>{{$index}}</th>
+            <td>{{f.Name}}</td>
+            <td>{{f.Time}}</td>
+            <td>{{f.Count}}</td>
+            <td>{{f.Files}}</td>
+          </tr>       
+        </tbody>
+      </table>
+    </div>
+  </body>
+</html>

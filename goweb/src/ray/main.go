@@ -8,8 +8,10 @@ import (
 // https://github.com/gin-gonic/gin/blob/master/README.md
 func main() {
 	r := gin.Default()
-	r.GET("/ping", func(c *gin.Context) {
-		c.String(200, "pong")
+	r.LoadHTMLGlob("templates/index.tpl")
+	r.GET("/", func(c *gin.Context) {
+		obj := gin.H{"title": "Main website"}
+		c.HTML(200, "index.tpl", obj)
 	})
 
 	// Listen and server on 0.0.0.0:8080
